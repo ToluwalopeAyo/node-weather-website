@@ -1,5 +1,13 @@
 language: node_js
 node_js: 
   - 12.18.3
-install:
-  - npm install
+jobs:
+  include:
+    - stage: deploy
+      provider: Heroku
+      user: "tolulopeaiyegbusi@gmail.com"
+      api_key: 
+        secure: $HEROKU_API_KEY
+      app: $HEROKU_APP_NAME
+      on:
+        branch: main
