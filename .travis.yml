@@ -1,9 +1,14 @@
 language: node_js
 node_js: 
   - 12.18.3
-deploy:
-  provider: heroku
-    api_key: $HEROKU_API_KEY
-    app: $HEROKU_APP_NAME
+jobs:
+  include:
+    - stage: deploy
+      provider: heroku
+      user: "tolulopeaiyegbusi@gmail.com"
+      api_key: 
+        secure: $HEROKU_API_KEY
+      app: $HEROKU_APP_NAME
       on:
         branch: main
+
