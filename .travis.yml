@@ -4,7 +4,7 @@ node_js:
 jobs:
   include:
     - stage: deploy
-      provider: Heroku
+      provider: heroku
       user: "tolulopeaiyegbusi@gmail.com"
       api_key: 
         secure: $HEROKU_API_KEY
